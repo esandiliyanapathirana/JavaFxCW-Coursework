@@ -86,6 +86,49 @@ public class InventoryOperationsManager {
         finalizeFileReplacement(originalFile, temporyFile, exists, "Successfully deleted the item" + targetCode, "Error! Deletion Failed");
     }
 
+    public static void updateItems() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the code of the item that you want to update: ");
+        String target = scanner.nextLine().trim();
+
+        File originalFile = new File(file_path);
+        File temporyFile = new File(tempory_file_path);
+        boolean exists = false;
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(originalFile));
+             BufferedWriter writer = new BufferedWriter(new FileWriter(temporyFile))) {
+
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] data = line.split("\\|");
+
+                if (data.length > 0 && data[0].equals(target)) {
+                    exists = true;
+                    System.out.println("Item Found! Enter the new item details: ");
+
+                    String name = promptUser(scanner,"Enter the new item Name: ");
+                    String brand = promptUser(scanner,"Enter the new item Brand: ");
+                    String price = promptUser(scanner,"Enter the new item Price: ");
+                    String quantity = promptUser(scanner,"Enter the new item Quantity: ");
+                    String category = promptUser(scanner,"Enter the new item Category: ");
+                    String date = promptUser(scanner,"Enter the new Date(YYYY-MM-DD): ");
+                    String image = promptUser(scanner,"Enter the new image file name: ");
+                    String threshold = promptUser(scanner,"Enter the new Threshold: ");
+
+                    line =  String.join("|", target, name, brand, price, quantity, category, date, image, threshold);
+                }
+
+                writer.write(line);
+                writer.newLine();
+            }
+        } catch (IOException e) {
+            System.out.println("Error! Cant process the file " + e.getMessage());
+            return;
+        }
+
+        finalizeFileReplacement(originalFile, temporyFile, exists, "Successfully udated the item " + target, "Error! Update Failed ");
+    }
+
     private static void finalizeFileReplacement(File originalFile, File temporyFile, boolean exists, String sucessMessage, String failureMessage) {
         if(exists) {
             if(originalFile.delete()) {
