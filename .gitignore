@@ -1,14 +1,26 @@
 target/
+out/
+lib/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 .kotlin
+
+### Backup / duplicate POMs ###
+*.bak
+pom-maven.xml
+pom.xml.bak
+
+### Coursework artifacts ###
+*.pdf
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
 .idea/jarRepositories.xml
 .idea/compiler.xml
 .idea/libraries/
+.idea/workspace.xml
+.idea/.name
 *.iws
 *.iml
 *.ipr
