@@ -57,8 +57,9 @@ public class LegacyDataCleaner {
                 DateTimeFormatter.ofPattern("yyyy-MM-dd"),
                 DateTimeFormatter.ofPattern("dd/MM/yyyy"),
                 DateTimeFormatter.ofPattern("dd-MM-yyyy"),
-                DateTimeFormatter.ofPattern("MMM dd,yyyy", Locale.ENGLISH),
-                DateTimeFormatter.ofPattern("dd-MM-yyyy", Locale.ENGLISH),
+                DateTimeFormatter.ofPattern("MMM d, yyyy", Locale.ENGLISH),
+                DateTimeFormatter.ofPattern("dd-MMM-yyyy", Locale.ENGLISH),
+                DateTimeFormatter.ofPattern("yyyy/MM/dd")
         };
 
         String defaultDate = "Undated";
