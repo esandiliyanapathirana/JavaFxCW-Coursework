@@ -27,13 +27,13 @@ public class StockMonitor {
                 int thresholdLimit = Integer.parseInt(items[8].trim());
 
                 if (currentQuantity < thresholdLimit) {
-                    System.out.println("Warning!: " + itemName + " [" + itemCode + "] is LOW! Stock:" + currentQuantity + " ( Threshold: " + thresholdLimit + ")");
+                    System.out.println("Warning!: " + itemName + " [" + itemCode + "] is Low. The stock is:" + currentQuantity + " ( Threshold: " + thresholdLimit + ")");
 
                 }
             }
             System.out.println();
         } catch (IOException e) {
-            System.err.println("Error reading file: " + e.getMessage());
+            System.err.println("Error occurred when reading the file: " + e.getMessage());
         }
     }
 }
