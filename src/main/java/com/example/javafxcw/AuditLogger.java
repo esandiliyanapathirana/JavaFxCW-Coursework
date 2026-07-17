@@ -13,13 +13,13 @@ public class AuditLogger {
         String time = LocalDateTime.now()
                 .format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
 
-        String line = time + " | " + action + " | " + itemCode + " | qty=" + quantity;
+        String line = time + " | " + action + " | " + itemCode + " | Quantity =" + quantity;
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(log_file, true))) {
             writer.write(line);
             writer.newLine();
         } catch (IOException e) {
-            System.err.println("Could not write the audit log: " + e.getMessage());
+            System.err.println("Could not write audit log: " + e.getMessage());
         }
     }
 
