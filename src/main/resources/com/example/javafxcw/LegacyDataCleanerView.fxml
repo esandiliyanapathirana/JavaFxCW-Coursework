@@ -5,13 +5,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxcw.LegacyDataCleanerController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxcw.LegacyDataCleanerController">
    <children>
-      <Button layoutX="127.0" layoutY="267.0" mnemonicParsing="false" onAction="#CleanInventory" prefHeight="26.0" prefWidth="120.0" text="Clean Inventory File" />
-      <Button layoutX="352.0" layoutY="267.0" mnemonicParsing="false" onAction="#CleanDealers" prefHeight="26.0" prefWidth="110.0" text="Clean Dealers File" />
-      <Label fx:id="ClickButtons" layoutX="174.0" layoutY="152.0" prefHeight="40.0" prefWidth="276.0" text="Click one of these buttons below.">
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="215.0" layoutY="147.0" mnemonicParsing="false" onAction="#CleanInventory" prefHeight="40.0" prefWidth="148.0" style="-fx-alignment: cream;" text="Clean Inventory File" />
+      <Button contentDisplay="CENTER" layoutX="215.0" layoutY="215.0" mnemonicParsing="false" onAction="#CleanDealers" prefHeight="40.0" prefWidth="148.0" text="Clean Dealers File" />
+      <Button contentDisplay="CENTER" layoutX="215.0" layoutY="284.0" mnemonicParsing="false" onAction="#goBackToMenu" prefHeight="40.0" prefWidth="148.0" text="Back to Menu" />
+      <Label fx:id="ClickButtons" alignment="CENTER" contentDisplay="CENTER" layoutX="163.0" layoutY="79.0" prefHeight="40.0" prefWidth="275.0" text="Click one of these buttons below." textAlignment="RIGHT">
          <font>
-            <Font name="System" size="15.0" />
+            <Font name="Calibri Bold" size="16.0" />
          </font>
       </Label>
    </children>
