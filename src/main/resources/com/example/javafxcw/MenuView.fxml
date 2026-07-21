@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="520.0" prefWidth="720.0" spacing="14.0" style="-fx-padding: 40; -fx-background-color: #f4f7fb;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxcw.MenuController">
+    <Label text="Malabe Tuk-Tuk Spares Depot">
+        <font>
+            <Font name="System Bold" size="24.0" />
+        </font>
+    </Label>
+    <Label text="Main Menu">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </Label>
+    <Button onAction="#openCleanScreen" prefHeight="36.0" prefWidth="260.0" style="-fx-text-fill: black;" text="Clean Data Files" />
+    <Button onAction="#openInventoryScreen" prefHeight="36.0" prefWidth="260.0" style="-fx-text-fill: Black;" text="View Inventory" />
+    <Button onAction="#openManagePartsScreen" prefHeight="36.0" prefWidth="260.0" style="-fx-text-fill: black;" text="Manage Parts" />
+    <Button onAction="#openSearchScreen" prefHeight="36.0" prefWidth="260.0" style="-fx-text-fill: black;" text="Search Parts" />
+    <Button onAction="#openDealersScreen" prefHeight="36.0" prefWidth="260.0" style="-fx-text-fill: black;" text="Dealers" />
+    <Button onAction="#openCartScreen" prefHeight="36.0" prefWidth="260.0" style="-fx-text-fill: black;" text="Cart / Checkout" />
+</VBox>
