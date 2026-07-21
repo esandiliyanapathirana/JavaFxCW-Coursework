@@ -38,8 +38,8 @@ public class LegacyDataCleaner {
                     writer.write(newLineToWrite);
                     writer.newLine();
                 }
-                System.out.println("Data cleaning completed. New inventory file is saved as: " + outputFile);
             }
+            System.out.println("Data cleaning completed. New inventory file is saved as: " + outputFile);
         } catch (IOException error) {
             System.err.println("Error occred. Can't process the file:" + error.getMessage());
         }
@@ -59,6 +59,7 @@ public class LegacyDataCleaner {
                 DateTimeFormatter.ofPattern("dd-MM-yyyy"),
                 DateTimeFormatter.ofPattern("MMM d, yyyy", Locale.ENGLISH),
                 DateTimeFormatter.ofPattern("dd-MMM-yyyy", Locale.ENGLISH),
+                DateTimeFormatter.ofPattern("MMM d yyyy", Locale.ENGLISH),
                 DateTimeFormatter.ofPattern("yyyy/MM/dd")
         };
 
