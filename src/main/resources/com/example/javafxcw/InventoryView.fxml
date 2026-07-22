@@ -30,7 +30,7 @@
 
     <TableView fx:id="inventoryTable" prefHeight="340.0" style="-fx-background-color: white;" />
 
-    <Label text="Low Stock Warnings" textFill="#070707">
+    <Label text="Low Stock Warnings">
         <font>
             <Font name="System Bold" size="15.0" />
         </font>
