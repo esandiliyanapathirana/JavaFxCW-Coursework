@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<GridPane hgap="14.0" style="-fx-padding: 28; -fx-background-color: #f4f7fb;" vgap="12.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxcw.ManagePartsController">
+    <columnConstraints>
+        <ColumnConstraints minWidth="180.0" prefWidth="220.0" />
+        <ColumnConstraints minWidth="320.0" prefWidth="420.0" />
+    </columnConstraints>
+    <Label text="Manage Parts" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0">
+        <font>
+            <Font name="System Bold" size="22.0" />
+        </font>
+    </Label>
+    <Label text="Add, update or delete a part. Threshold can be set for each part." GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+        <font>
+            <Font size="15.0" />
+        </font>
+    </Label>
+    <Label text="Code" GridPane.columnIndex="0" GridPane.rowIndex="2">
+        <font>
+            <Font size="15.0" />
+        </font></Label>
+    <TextField fx:id="codeField" prefHeight="30.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    <Label text="Name" GridPane.columnIndex="0" GridPane.rowIndex="3">
+        <font>
+            <Font size="15.0" />
+        </font></Label>
+    <TextField fx:id="nameField" prefHeight="30.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+    <Label text="Brand" GridPane.columnIndex="0" GridPane.rowIndex="4">
+        <font>
+            <Font size="15.0" />
+        </font></Label>
+    <TextField fx:id="brandField" prefHeight="30.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    <Label text="Price" GridPane.columnIndex="0" GridPane.rowIndex="5">
+        <font>
+            <Font size="15.0" />
+        </font></Label>
+    <TextField fx:id="priceField" prefHeight="30.0" promptText="Example: 1250.00" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+    <Label text="Quantity" GridPane.columnIndex="0" GridPane.rowIndex="6">
+        <font>
+            <Font size="15.0" />
+        </font></Label>
+    <TextField fx:id="qtyField" prefHeight="30.0" promptText="Example: 10" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+    <Label text="Category" GridPane.columnIndex="0" GridPane.rowIndex="7">
+        <font>
+            <Font size="15.0" />
+        </font></Label>
+    <TextField fx:id="categoryField" prefHeight="30.0" promptText="Engine / Electrical / Brakes / Bodywork" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+    <Label text="Date" GridPane.columnIndex="0" GridPane.rowIndex="8">
+        <font>
+            <Font size="15.0" />
+        </font></Label>
+    <TextField fx:id="dateField" prefHeight="30.0" promptText="yyyy-MM-dd" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+    <Label text="Image file name" GridPane.columnIndex="0" GridPane.rowIndex="9">
+        <font>
+            <Font size="15.0" />
+        </font></Label>
+    <TextField fx:id="imageField" prefHeight="30.0" promptText="Example: spark.jpg" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+    <Label text="Low-stock threshold" GridPane.columnIndex="0" GridPane.rowIndex="10">
+        <font>
+            <Font size="15.0" />
+        </font></Label>
+    <TextField fx:id="thresholdField" prefHeight="30.0" text="10" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+    <HBox spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="11">
+        <padding>
+            <Insets top="8.0" />
+        </padding>
+        <Button onAction="#addPart" prefHeight="32.0" prefWidth="90.0" text="Add">
+            <font>
+                <Font size="15.0" />
+            </font></Button>
+        <Button onAction="#updatePart" prefHeight="32.0" prefWidth="90.0" text="Update">
+            <font>
+                <Font size="15.0" />
+            </font></Button>
+        <Button onAction="#deletePart" prefHeight="32.0" prefWidth="90.0" text="Delete">
+            <font>
+                <Font size="15.0" />
+            </font></Button>
+        <Button onAction="#goBackToMenu" prefHeight="32.0" prefWidth="120.0" text="Back to Menu">
+            <font>
+                <Font size="15.0" />
+            </font></Button>
+    </HBox>
+    <Label fx:id="messageLabel" text="Ready" textFill="#4a5d73" GridPane.columnIndex="1" GridPane.rowIndex="12">
+        <font>
+            <Font size="13.0" />
+        </font>
+    </Label>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+    </rowConstraints>
+</GridPane>
