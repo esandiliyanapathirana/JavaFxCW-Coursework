@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="500" prefWidth="800" spacing="10" style="-fx-padding: 12;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxcw.DealersController">
+
+    <Label text="Random Dealer Selection">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font></Label>
+    <HBox spacing="10">
+        <Button onAction="#selectDealers" text="Select 4 Dealers">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+        <Button onAction="#goBackToMenu" text="Back to Menu">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+    </HBox>
+    <ListView fx:id="dealerList" prefHeight="380" />
+</VBox>
