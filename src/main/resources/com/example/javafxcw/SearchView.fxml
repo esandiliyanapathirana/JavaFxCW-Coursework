@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10"
+      xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.javafxcw.SearchController"
+      style="-fx-padding: 12;">
+
+    <Label text="Multi-Criteria Search"/>
+    <HBox spacing="8">
+        <TextField fx:id="categoryField" promptText="Category"/>
+        <TextField fx:id="minPriceField" promptText="Min price"/>
+        <TextField fx:id="maxPriceField" promptText="Max price"/>
+        <TextField fx:id="keywordField" promptText="Keyword"/>
+        <Button text="Search" onAction="#searchParts"/>
+        <Button text="Back to Menu" onAction="#goBackToMenu"/>
+    </HBox>
+    <TableView fx:id="resultTable" prefHeight="420"/>
+</VBox>
