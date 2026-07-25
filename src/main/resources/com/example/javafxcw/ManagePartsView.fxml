@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
-<GridPane hgap="14.0" style="-fx-padding: 28; -fx-background-color: #f4f7fb;" vgap="12.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxcw.ManagePartsController">
+<GridPane hgap="14.0" style="-fx-padding: 28; -fx-background-color: #f4f7fb;" vgap="12.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxcw.ManagePartsController">
     <columnConstraints>
         <ColumnConstraints minWidth="180.0" prefWidth="220.0" />
         <ColumnConstraints minWidth="320.0" prefWidth="420.0" />

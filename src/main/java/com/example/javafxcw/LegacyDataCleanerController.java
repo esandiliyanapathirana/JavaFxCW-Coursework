@@ -7,20 +7,20 @@ import javafx.scene.control.Label;
 public class LegacyDataCleanerController {
 
     @FXML
-    private Label ClickButtons;
+    private Label statusLabel;
 
     @FXML
-    void CleanDealers(ActionEvent event) {
+    void cleanDealers(ActionEvent event) {
         LegacyDataCleaner.dealersClean();
         AppData.dealerStore.load();
-        ClickButtons.setText("Dealers text file cleaned.");
+        statusLabel.setText("Dealers text file cleaned.");
     }
 
     @FXML
-    void CleanInventory(ActionEvent event) {
+    void cleanInventory(ActionEvent event) {
         LegacyDataCleaner.inventoryClean();
         AppData.inventoryStore.load();
-        ClickButtons.setText("Inventory text file cleaned.");
+        statusLabel.setText("Inventory text file cleaned.");
     }
 
     @FXML

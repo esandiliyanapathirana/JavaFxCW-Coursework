@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="620.0" prefWidth="920.0" spacing="12.0" style="-fx-padding: 24; -fx-background-color: #f4f7fb;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxcw.InventoryController">
+<VBox prefHeight="620.0" prefWidth="920.0" spacing="12.0" style="-fx-padding: 24; -fx-background-color: #f4f7fb;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxcw.InventoryController">
 
     <Label text="View Inventory">
         <font>
