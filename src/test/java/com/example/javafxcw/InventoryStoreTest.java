@@ -1,10 +1,33 @@
 package com.example.javafxcw;
 
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class InventoryStoreTest {
+
+    private static final Path INVENTORY_FILE = Path.of("inventory_cleaned.txt");
+    private byte[] inventoryBackup;
+
+    @BeforeEach
+    void backupInventoryFile() throws Exception {
+        if (Files.exists(INVENTORY_FILE)) {
+            inventoryBackup = Files.readAllBytes(INVENTORY_FILE);
+        } else {
+            inventoryBackup = new byte[0];
+        }
+    }
+
+    @AfterEach
+    void restoreInventoryFile() throws Exception {
+        Files.write(INVENTORY_FILE, inventoryBackup);
+    }
 
     private Part samplePart(String code, String category, double price, int quantity) {
         return new Part(code, "Name", "Brand", price, quantity, category,

@@ -13,6 +13,7 @@ pom.xml.bak
 
 ### Coursework artifacts ###
 *.pdf
+audit_log.txt
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
